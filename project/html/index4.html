@@ -1,59 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>
-        multimedia
-    </h1>
-    <h3>audio file</h3>
-    <audio controls>
-        <source src="boot.mp3">
-        </audio>
-        <h3>video file</h3>
-
-<video controls width="320" height="240">
-    <source src="st1.mp4">
-</video>
-<video controls width="320" height="240" autoplay muted>
-    <source src="st1.mp4">
-    <track src="subtitles1.vtt"
-    kind="subtitles"
-    srclang="en"
-    label="English"
-    />
-    <track src="subtitles2.vtt"
-    kind="subtitles"
-    srclang="in"
-    label="Hindi"
-    />
-</video>
-<hr>
-<svg width="900"  height="900">
-    <circle
-    cx ="250"
-    cy="400"
-    r="200"
-    stroke="red"
-    stroke-width="5"
-    fill="pink"
-    />
-    <ellipse cx="100" cy="70" rx="85" ry="55" fill="red"/>
-    <text fill="black" font-size="45" font-family="Verdana" x="50" y="40"> ZEE Cinema</text>
-</svg>
-
-
-    
-</body>
-</html> -->
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,24 +6,31 @@
     <title>Multimedia Example</title>
 </head>
 <body>
+    <h1> Images and Multimedia</h1>
 
-    <h1>Multimedia</h1>
+    <h2>Images</h2>
+    <figure><img src="img/pexels-pedro-figueras-202443-681467.jpg" height="250px" width="250px" alt="picture"></figure>
+    <figure>
+        <img src="img/pexels-pedro-figueras-202443-681467.jpg" height="250px" width="250px" alt="picture">
+        <figcaption>Moon</figcaption>
+    </figure>
 
-    <h3>Audio File</h3>
+
+    <h2>Audio File</h2>
     <audio controls>
-        <source src="boot.mp3" type="audio/mpeg">
+        <source src="audio/dark-engine-logo-141942.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
-    <h3>Video File</h3>
+    <h2>Video File</h2>
     <video controls width="320" height="240">
-        <source src="st1.mp4" type="video/mp4">
+        <source src="audio/3579494-uhd_3840_2160_30fps.mp4" type="video/mp4">
         Your browser does not support the video element.
     </video>
 
-    <h3>Video File with Subtitles</h3>
+    <h2>Video File with Subtitles</h2>
     <video controls width="320" height="240" autoplay muted>
-        <source src="st1.mp4" type="video/mp4">
+        <source src="audio/3579494-uhd_3840_2160_30fps.mp4" type="video/mp4">
         <track src="subtitles1.vtt" kind="subtitles" srclang="en" label="English">
         <track src="subtitles2.vtt" kind="subtitles" srclang="hi" label="Hindi">
         Your browser does not support the video element.
@@ -87,10 +38,10 @@
 
     <hr>
 
-    <h3>SVG Graphic</h3>
+    <h1>SVG Graphic</h1>
     <svg width="900" height="900">
-        <circle cx="250" cy="400" r="200" stroke="red" stroke-width="5" fill="pink" />
-        <ellipse cx="100" cy="70" rx="85" ry="55" fill="red" />
+        <circle cx="250" cy="400" r="200" stroke="green" stroke-width="5" fill="lightgreen" />
+        <ellipse cx="100" cy="70" rx="85" ry="55" fill="lightgreen" />
         <text fill="black" font-size="45" font-family="Verdana" x="50" y="40">ZEE Cinema</text>
     </svg>
 
