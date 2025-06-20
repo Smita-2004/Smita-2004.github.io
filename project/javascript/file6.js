@@ -27,8 +27,15 @@
 // }
 // add(4,5)
 
-const add = (a,b) =>{
- return a+b
+// const add = (a,b) =>{
+//  return a+b
+// }
+// const res = add(4,5)
+// console.log(res)
+
+
+const add= (...args) =>{
+//  console.log(args[0])
+ console.log(args)
 }
-const res = add(4,5)
-console.log(res)
+add(4,5,6,7,8)
