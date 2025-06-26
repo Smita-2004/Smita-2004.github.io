@@ -62,17 +62,72 @@ db.employees.aggregate([
 //   },
 // ]);
 
+db.employees.insertMany([
+  {empId:  ObjectId('685bbf3fd25e3d3d5e748a5f'),
+    location: [ 'OH', 'LA', 'FL' ],
+  },
+  {
+    empId:  ObjectId('685bbf5cd25e3d3d5e748a60'),
+     location: [ 'TX', 'LA', 'FL' ],
+  },
+  {
+    empId: ObjectId('685bbf5cd25e3d3d5e748a61'),
+    location: [ 'TX', 'LA', 'FL' ],
+  },{
+    empId: ObjectId('685bca049da68fc153748a61'),
+    location: [ 'TX', 'LA', 'FL' ],
+  }
+
+]);
+
+
+
+// db.employees.aggregate([
+//     {$match: {salary:{$gt:2000}}},
+//     {
+//         $lookup:{
+//         from:"$orders" ,
+//         localField:" ",
+//         foreignField:"_id",
+//         as:"orders"
+//     },
+// },
+// {$unwind:"$orders"},
+// {$project:{name:1,slary:1,"orders.orderValue":1}},
+
+// ])
+
+
 db.employees.aggregate([
-    {$match: {salary:{$gt:2000}}},
+  
     {
         $lookup:{
-        from:"$orders" ,
-        localField:" ",
-        foreignField:"_id",
-        as:"orders"
+        from:"$emp_country" ,
+        localField:"location",
+        foreignField:"location",
+        as:"emp_country"
     },
 },
-{$unwind:"$orders"},
-{$project:{name:1,slary:1,"orders.orderValue":1}},
+{$unwind:"$emp_country"},
+{$project:{name:1,"emp_country.emp_countryValue":1}},
 
+])
+
+
+db.employees.createIndex({"email":1})
+db.employees.getIndex()
+db.employees.dropIndex({email:1})
+db.employees.find({email:"john@gmail.com"}).explain("executionStats")
+
+
+// country,name,score
+// India,krish,20
+// India,Krish,21
+// India,krish,22
+// UK,john,21
+// UK,john,25
+// UK,john,22
+db.employees.aggregate([
+    {$group:{_id:{country:"$country",name:"$name"},
+total:{$sum:"$score"}}}
 ])
