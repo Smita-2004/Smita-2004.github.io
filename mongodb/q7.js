@@ -124,5 +124,5 @@ db.studentInfo.aggregate([
     },
 },
 {$unwind:"$marks"},
-{$group:{id:{term:"$term", subject:"$subject"}}}
+{$group:{_id:{term:"$marks.term",AvgScore:{$avg:"$marks.score"}}}}
 ])
