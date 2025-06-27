@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smita Tiwari</title>
+  <link rel="icon" type="image/x-icon" href="ball.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <div class="header-row"> 
+    <div><h1>Smita Tiwari</h1></div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><span class="toggle-darkmode" onclick="document.body.classList.toggle('dark-mode')"><i class="fas fa-moon"></i></span></li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <!-- Home -->
+    <div class="row" id="home">
+      <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
+        <div class="box">
+          <h1><span id="typing"></span></h1>
+          <p>I’m a full-stack developer passionate about building modern web experiences.</p>
+          <div class="box">
+
+<a href="https://drive.google.com/file/d/1BOtZcgeX6sj-e3Td8WMBtar5gKRwYZVV/view?usp=sharing" target="_blank">
+  <button>Download CV</button>
+</a>
+        </div>
+        <div class="box">
+          <img src="https://picsum.photos/id/1011/400/400" alt="Profile Image" style="max-width:100%; border-radius:10px;">
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="row" id="projects">
+      <h1>Projects</h1>
+      <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+        <div class="box"><h3>Project One</h3><p>Short description of project one.</p></div>
+        <div class="box"><h3>Project Two</h3><p>Short description of project two.</p></div>
+        <div class="box"><h3>Project Three</h3><p>Short description of project three.</p></div>
+      </div>
+    </div>
+
+    <!-- Services -->
+    <div class="row" id="services">
+      <h1>Services</h1>
+      <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+        <div class="box"><h3>Web Development</h3><p>Creating fast, scalable web apps.</p></div>
+        <div class="box"><h3>Mobile Apps</h3><p>Modern apps for Android & iOS.</p></div>
+        <div class="box"><h3>Backend APIs</h3><p>Robust and secure backend solutions.</p></div>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div class="row" id="about">
+      <h1>About Me</h1>
+      <p>I am a tech enthusiast who enjoys solving real-world problems with code.</p>
+      <h2>Skills</h2>
+      <div class="skills">
+        <i class="fab fa-html5"></i>
+        <i class="fab fa-css3-alt"></i>
+        <i class="fab fa-js-square"></i>
+        <i class="fab fa-react"></i>
+        <i class="fab fa-node-js"></i>
+        <i class="fab fa-python"></i>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="row" id="contact">
+      <h1>Contact</h1>
+      <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+        <div class="box">
+          <h3>Send a Message</h3>
+          <input type="text" placeholder="Your Name">
+          <input type="email" placeholder="Your Email">
+          <textarea rows="5" placeholder="Your Message"></textarea>
+          <button>Send</button>
+        </div>
+        <div class="box">
+          <h3>Contact Info</h3>
+          <p><b>Email: </b> smita23tiwari.007@gmail.com</p>
+          <p><b>Phone: </b> +91 12345 67890</p>
+          <p><b>Github: </b><a href="https://github.com/Smita-2004">github.com/Smita-2004</a></p>
+          <p><b>LinkedIn: </b><a href="https://www.linkedin.com/in/smita-tiwari23/">linkedin.com/in/smita-tiwari23/</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">&copy; 2025 Smita Tiwari. All rights reserved.</div>
+  </div>
+
+  <!-- Scroll to top button -->
+  <button class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">&#8679;</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

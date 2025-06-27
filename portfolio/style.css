@@ -1,0 +1,141 @@
+:root {
+  --bg-light: #fff9f5;
+  --text-light: #1b1b1b;
+  --primary: #ff5e57;
+  --secondary: #ff7e67;
+  --accent: #6c5ce7;
+  --card-bg: #fff;
+  --gradient: linear-gradient(135deg, #ff5e57, #f0932b);
+}
+body.dark-mode {
+  --bg-light: #1c1c25;
+  --text-light: #f1f1f1;
+  --primary: #ff9f43;
+  --secondary: #fd6e6e;
+  --accent: #a29bfe;
+  --card-bg: #2c2c3e;
+  --gradient: linear-gradient(135deg, #ff6b81, #ffa502);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+.header-row {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--card-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 999;
+  border-bottom: 2px solid var(--primary);
+}
+.header-row h1 {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+.header-row ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+}
+.header-row a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.header-row a:hover {
+  color: var(--primary);
+}
+.row {
+  padding: 120px 20px 80px;
+}
+.box {
+  flex: 1;
+  padding: 25px;
+  background-color: var(--card-bg);
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+.row h1 {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  color: var(--primary);
+}
+button {
+  padding: 12px 24px;
+  margin: 10px 10px 0 0;
+  background-image: var(--gradient);
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-image 0.3s, transform 0.2s;
+}
+button:hover {
+  transform: scale(1.05);
+  background-image: linear-gradient(135deg, #ff7e67, #e17055);
+}
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  background: var(--card-bg);
+  color: var(--text-light);
+}
+.skills i {
+  font-size: 2.2rem;
+  margin: 10px 15px 10px 0;
+  color: var(--accent);
+}
+.footer {
+  text-align: center;
+  padding: 25px;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 0 0 15px 15px;
+  margin-top: 80px;
+}
+.scroll-top {
+  position: f
+}
+
+
+
+
+
+
+
+
+
+
+
