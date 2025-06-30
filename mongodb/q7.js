@@ -127,3 +127,66 @@ db.studentInfo.aggregate([
 {$unwind:"$marks"},
 {$group:{_id:{term:"$marks.term",AvgScore:{$avg:"$marks.score"}}}}
 ])
+
+// show grade A to all employees
+
+db.employees.aggregate([
+  {$project:{
+    _id:0,
+    name:1,
+    salary:1,
+    Grade:{$cond:[{$gt:["$salary",3000]},"Grade A","grade B"]}}
+  }
+])
+
+// store result in another collection
+// out -> stores result into another collection
+db.employees.aggregate([
+  {$project:{
+    _id:0,
+    name:1,
+    salary:1,
+    Grade:{$cond:{
+      if:{$gt:["salary",2000]},
+      then:"Grade A",
+      else:"Grade B"
+    }
+    }}
+  },
+  {$out:"GradeWiseSalary"}
+])
+
+// db.createView("viewname","collectionName,"[query])
+
+db.createView("salaryView","employees",[
+  {$project:{
+    _id:0,
+    name:1,
+    salary:1,
+    Grade:{$cond:{
+      if:{$gt:["salary",2000]},
+      then:"Grade A",
+      else:"Grade B"
+    }
+    }}
+  },
+ 
+])
+
+db.salaryView.drop()
+// if any changes needed in view first deop the view then run the updated query
+db.createView("salaryView","employees",[
+  {$project:{
+    _id:0,
+    name:1,
+    department:1,
+    salary:1,
+    Grade:{$cond:{
+      if:{$gt:["salary",2000]},
+      then:"Grade A",
+      else:"Grade B"
+    }
+    }}
+  },
+ 
+])
