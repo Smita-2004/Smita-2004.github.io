@@ -117,6 +117,7 @@ db.marks.updateMany(
 );
 
 db.studentInfo.aggregate([
+    {match:{name:"John"}},
     {$lookup:{from:"marks",
         localField: "id",
         foreignField:"sid",
