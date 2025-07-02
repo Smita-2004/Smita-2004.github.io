@@ -174,6 +174,7 @@ db.createView("salaryView","employees",[
 ])
 
 db.salaryView.drop()
+
 // if any changes needed in view first deop the view then run the updated query
 db.createView("salaryView","employees",[
   {$project:{
